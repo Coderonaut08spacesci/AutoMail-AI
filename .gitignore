@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.local
+*.key
+
+# OS
+.DS_Store
+.vscode/
+.idea/
+
+# AutoMail data
+emails.csv
+leads/
+sent/
