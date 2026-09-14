@@ -16,3 +16,12 @@ __pycache__/
 emails.csv
 leads/
 sent/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Resume - private
+assets/
+*.pdf
