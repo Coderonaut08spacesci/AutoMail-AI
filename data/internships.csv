@@ -1,4 +1,28 @@
 email,hr_name,company,role,tech_stack
-hr@innovatech.com,Sarah,Innovatech,Backend Developer Intern,Python and PostgreSQL
-recruiting@cloudsys.io,David,CloudSys,Software Engineering Intern,React and Node.js
-
+gracekotian2008@gmail.com,Grace,TestCompany,Internship,Python and SQL
+marykotian1985@gmail.com,Mary,Mary Tech,Internship ,Python and SQL
+hr@innovatech.com,Sarah,Innovatech,Internship,Python and PostgreSQL
+recruiting@cloudsys.io,David,CloudSys,Internship ,React and Node.js
+careers@faircloud.ai,Hiring Team,FairCloud AI,Internship,"AI/ML, Cloud, Python, Backend"
+careers@dynatrace.com,Hiring Team,Dynatrace,Internship ,"Cloud, Observability, AI, Software Engineering"
+hr@miracuves.com,HR Team,Miracuves Solutions,Internship,"Web Development, Mobile Apps, AI, Databases"
+hr@hyperlinkinfosystem.com,HR Team,Hyperlink InfoSystem,Internship ,"Web, Mobile Apps, AI, Cloud"
+office@empireplatforms.com,Hiring Team,Empire,Internship,"Software, Infrastructure, Integrations, Web"
+hello@proximity.tech,Hiring Team,Proximity Works,Internship ,"AI, Backend, React Native, Data/ML"
+careers@vestval.com,Hiring Team,Vestval,Internship,"Python, APIs, Data Pipelines, Automation, AI"
+careers@faircloud.ai,Hiring Team,FairCloud AI,Internship ,"AI/ML, Cloud, Python, Backend"
+careers@dynatrace.com,Hiring Team,Dynatrace,Internship,"Cloud, Observability, Software Engineering, AI"
+office@empireplatforms.com,Hiring Team,Empire,Internship ,"Software, Infrastructure, Integrations, Web"
+hr@miracuves.com,HR Team,Miracuves Solutions,Internship,"Web, Mobile Apps, AI, Databases"
+hr@hyperlinkinfosystem.com,HR Team,Hyperlink InfoSystem,Internship ,"Web, Mobile Apps, AI, Cloud"
+internship@qualsofttech.com,Internship Team,Qualsoft,Internship,"Python, Cloud, AI/ML, Software Testing, Blockchain"
+careers@sumcircle.com,Hiring Team,SumCircle,Internship ,"Python, React, AI, Enterprise Software"
+careers@ksoftpl.com,Careers Team,Kanishka Software,Internship,"Web Development, Software, DevOps, Cloud"
+jobs@esoftech.com,Hiring Team,e.Soft Technologies,Internship ,"Python, Django, MySQL, APIs, Git, Docker"
+careers@kpaisa.com,Hiring Team,kPaisa,Internship,"Software Development, FinTech, Web, Databases"
+contact@bharatgen.com,Hiring Team,BharatGen,Internship ,"Python, AI/ML, LLMs, MLOps, Docker, AWS"
+careers@pactorize.com,Hiring Team,Pactorize,Internship,"Python, AI, LLMs, Cloud, Git, React, Node.js"
+careers@caratsense.in,Hiring Team,CaratSense AI,Internship ,"JavaScript, React, Python, Node.js, APIs, Databases, Git"
+info@cubosquare.com,Hiring Team,Cubosquare Technology,Internship,"MongoDB, Express.js, React.js, Node.js, Git, REST APIs"
+info@zycus.com,Talent Acquisition Team,Zycus,Internship ,"AI, ML, SaaS, Java, Angular, React, Cloud"
+leads@aprilinnovations.com,Hiring Team,April Innovations,Internship,"Web, Mobile, AI, Cloud, Product Engineering"

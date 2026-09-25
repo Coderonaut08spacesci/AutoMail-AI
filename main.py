@@ -1,4 +1,3 @@
-
 import os
 import sys
 import time
@@ -29,7 +28,7 @@ def get_or_prompt_sender_profile():
         "SENDER_COLLEGE": "Enter your college name",
         "SENDER_PHONE": "Enter your phone number",
         "SENDER_GITHUB": "Enter your GitHub profile URL",
-        "SENDER_LINKEDIN": "Enter your LinkedIn profile URL"
+#        "SENDER_LINKEDIN": "Enter your #LinkedIn profile URL"
     }
     profile = {}
     env_updated = False
@@ -70,7 +69,7 @@ def fill_template(template_str: str, hr_name: str, company: str, tech_stack: str
     filled = filled.replace("{{sender_college}}", profile.get("SENDER_COLLEGE", ""))
     filled = filled.replace("{{sender_phone}}", profile.get("SENDER_PHONE", ""))
     filled = filled.replace("{{sender_github}}", profile.get("SENDER_GITHUB", ""))
-    filled = filled.replace("{{sender_linkedin}}", profile.get("SENDER_LINKEDIN", ""))
+#    filled = #filled.replace("{{sender_linkedin}}", #profile.get("SENDER_LINKEDIN", ""))
     filled = filled.replace("{{sender_email}}", email_user or "")
     return filled
 
@@ -152,10 +151,11 @@ def main():
 
 if __name__ == "__main__":
     main()
-PY
 
 
-"""import os
+#version 1.0
+"""
+import os
 import sys
 import time
 import argparse
@@ -183,7 +183,7 @@ def get_or_prompt_sender_profile():
         "SENDER_COLLEGE": "Enter your college name",
         "SENDER_PHONE": "Enter your phone number",
         "SENDER_GITHUB": "Enter your GitHub profile URL",
-        "SENDER_LINKEDIN": "Enter your LinkedIn profile URL"
+#        "SENDER_LINKEDIN": "Enter your #LinkedIn profile URL"
     }
     
     profile = {}

@@ -1,0 +1,21 @@
+Dear {{hr_name}},
+
+I hope this email finds you well.
+
+My name is {{sender_name}}, and I am currently a Second Year B.Sc. Computer Science student at {{sender_college}}, and I am looking for a 1–2 month software/IT internship where I can contribute to real-world projects while gaining practical industry experience. I came across {{company}} while researching technology companies in Mumbai and was particularly interested in your work involving {{tech_stack}}.
+
+My primary technical strengths are Python, MySQL, HTML and CSS, with additional knowledge of Java, JavaScript, C, Data Structures & Algorithms, Software Engineering, Git and GitHub. I have also built projects involving Django, NLP, AI APIs, automation and databases. 
+
+I am highly motivated, eager to learn from experienced developers, and available for a hybrid, part-time, or full-time internship.
+
+I have attached my resume for your review. I would welcome the opportunity to discuss how my dedication and skills can support your team.
+
+GitHub Profile: {{sender_github}}
+
+Thank you for your time and consideration.
+
+Warm regards,
+{{sender_name}}
+Phone: {{sender_phone}}
+Email: {{sender_email}}
+

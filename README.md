@@ -6,7 +6,10 @@ An automated cold-emailing tool powered by **Google Gemini 2.5 Flash**, **SQLite
 
 ## 📌 Core Features
 
-- **AI Personalization:** Leverages the official `google-genai` SDK to draft tailored cover letter bodies based on target company tech stacks and contact names.
+- **📄 Dynamic Resume Auto-Detection:** Automatically locates and attaches any `.pdf` resume file inside the `assets/` directory (e.g., `Grace.pdf`, `Resume.pdf`).
+- **🤖 Dual Generation Modes:**
+  - **Static Mode (Default):** Fast, zero-cost execution filling local text templates (`data/template.txt`).
+  - **AI Mode (`--use-ai`):** Leverages Google Gemini via `google-genai` to write personalized cold emails tailored to company tech stacks and roles.
 - **Zero-Dependency Data Engine:** Uses Python's native `csv` module for fast parsing without native C-compilation overhead (no `pandas` or `numpy` build bloat).
 - **Duplicate Prevention:** SQLite relational database tracks sent applications to ensure contacts are never emailed twice.
 - **MIME Resume Attachment:** Automatically encodes and attaches PDF resumes to outgoing emails.
@@ -25,36 +28,34 @@ An automated cold-emailing tool powered by **Google Gemini 2.5 Flash**, **SQLite
 
 ---
 
-## 📂 Project Structure
+## 📁 Directory Structure
 
 ```text
-auto-internship-apply/
-├── .env.example           # Environment variables blueprint
-├── .gitignore             # Git ignore file for secrets and virtualenvs
-├── Dockerfile             # Container configuration blueprint
-├── README.md              # Project documentation
-├── main.py                # Main CLI application runner
-├── requirements.txt       # Lightweight Python dependencies
+AutoMail-AI/
+├── assets/
+│   └── Resume.pdf  # Auto-detected resume attachment (.pdf)
 ├── data/
-│   ├── internships.csv    # Target company lead sheet
-│   └── applications.db    # SQLite tracking database (auto-generated)
+│   ├── internships.csv  # Target leads dataset
+│   └── template.txt # Cold email template
 ├── src/
-│   ├── __init__.py        # Python package marker
-│   ├── database.py        # SQLite storage and duplicate checking
-│   ├── llm_client.py     # Gemini API integration wrapper
-│   └── mailer.py          # SMTP mail transmission & PDF attachment
-└── assets/
-    └── resume.pdf         # Attached resume file
+│   ├── database.py   # SQLite database logger
+│   ├── llm_client.py  # Google Gemini client
+│   └── mailer.py # SMTP email sender & attachment handler
+├── .env       # Configuration & Sender Profile
+├── .gitignore 
+├── main.py             # Main CLI entry point
+└── requirements.txt       # Dependencies
+
 
 🚀 Quickstart Guide
 Step 1: Clone & Environment Setup
 
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/auto-internship-apply.git](https://github.com/YOUR_USERNAME/auto-internship-apply.git)
-cd auto-internship-apply
+git clone [https://github.com/Coderonaut08spacesci/AutoMail-AI.git](https://github.com/Coderonaut08spacesci/AutoMail-AI.git)
+cd AutoMail-AI
 
 # Initialize virtual environment
-python -m venv venv
+#python -m venv venv
 
 # Activate virtual environment
 # On Linux/Mac/Termux:
@@ -62,8 +63,19 @@ source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
 
+2. Install Dependencies
+
 # Install lightweight dependencies
 pip install -r requirements.txt
+
+or 
+
+For standard static usage:
+pip install python-dotenv
+
+For AI generation support using Gemini:
+pip install google-genai
+
 
 Step 2: Configure Environment Variables
 Copy .env.example to .env and fill in your details:
@@ -82,11 +94,15 @@ hr@example.com,Sarah,TechCorp,Backend Developer Intern,Python and PostgreSQL
 2. Place your resume PDF at assets/resume.pdf
 
 💻 Usage
-Interactive Preview Mode (Default / Dry-Run)
+1. Interactive Preview Mode (Default / Dry-Run)
 Previews generated emails in the console and prompts for interactive approval before sending:
 python main.py
 
-Automated Batch Mode
+2. Gemini AI Mode
+Generates customized email content using Google Gemini:
+python main.py --use-ai
+
+3. Automated Batch Mode
 Runs continuously without interactive approval prompts:
 python main.py --send
 
@@ -102,4 +118,8 @@ docker build -t automail-ai .
 
 # Run container with environment file
 docker run -it --env-file .env automail-ai
+
+🔐 Security Notice
+Never commit your .env file or emails_sent.db to source control.
+Use an App Password for Gmail SMTP authentication instead of your account password
 
